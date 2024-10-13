@@ -10,7 +10,7 @@ const permissionRouter = {
   path: "/permission",
   meta: {
     title: "权限管理",
-    icon: "ep:lollipop",
+    icon: "lollipop",
     rank: 10
   },
   children: [
@@ -55,6 +55,26 @@ const permissionRouter = {
   ]
 };
 
+const testRouter = {
+  path: "/test",
+  redirect: "/test/index",
+  meta: {
+    icon: "solar:golf-broken",
+    title: "测试页面目录",
+    rank: 11
+  },
+  children: [
+    {
+      path: "/test/index",
+      name: "Test",
+      meta: {
+        title: "测试页面",
+        showParent: true
+      }
+    }
+  ]
+};
+
 export default defineFakeRoute([
   {
     url: "/get-async-routes",
@@ -62,7 +82,7 @@ export default defineFakeRoute([
     response: () => {
       return {
         success: true,
-        data: [permissionRouter]
+        data: [permissionRouter, testRouter]
       };
     }
   }

@@ -7,7 +7,7 @@ export default {
   component: Layout,
   redirect: "/welcome",
   meta: {
-    icon: "ep:home-filled",
+    icon: "home-filled",
     title: "首页",
     rank: 0
   },

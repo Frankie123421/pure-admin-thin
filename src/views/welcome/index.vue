@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { getCaptcha } from "@/api/user";
 defineOptions({
   name: "Welcome"
 });
+getCaptcha();
+getCaptcha();
+getCaptcha();
 </script>
 
 <template>
-  <h1>Pure-Admin-Thin（非国际化版本）</h1>
+  <h1>智慧AI实验室</h1>
 </template>
